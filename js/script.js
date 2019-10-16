@@ -7,93 +7,87 @@ project 1 - A Random Quote Generator
 
 
 /*** 
-  Create the array of quote objects and name it `quotes`.
-  Add at least five quote objects to the `quotes` array.
-  Give each quote object a `quote` and `source` property.
-  Add the `citation` property to at least one object in the array.
-  Add the `year` property to at least one object in the array.
-  Use console.log() to log your array of quotes to the console.
-***/
+  The hardest part of this project was finding attributable quotes. So many of my favorite quotes have either no known author or was commonly attributed to the wrong person. I hope my quotes are not controversial but I really feel Malcom X speaks to all oppressed people. I wish our society would realize the extinct of oppression throughout history and honor all those who have been and are the victims of needless suffering. I believe Malcom X is one of the voices that speaks for them. We need to acknowledge that all humanity has equal value and judge people soley by they actions and not our stereotypes of them.
+ ***/
+ 
 let quotes = [
   {
-    quote:“Three may keep a secret, if two of them are dead.”,
+    quote: "Three may keep a secret, if two of them are dead.",
     source: "Benjamin Franklin",
-    citation: "Poor Richard's Almanack",
-    year: July 1735
-    }
+    citation: "Poor Richards Almanack",
+    year :1735 } ,
+    
     {
-      quote: “If violence is wrong in America, violence is wrong abroad. If it is wrong to be violent defending black women and black children and black babies and black men, then it is wrong for America to draft us, and make us violent abroad in defense of her. And if it is right for America to draft us, and teach us how to be violent in defense of her, then it is right for you and me to do whatever is necessary to defend our own people right here in this country.”,
-    source: Malcom X,
-    citation:"New York City Speech,
-    year: Nov. 1963
-    }
-    {quote: "They [America] don't practice what they preach, whereas South Africa preaches and practices the same thing. I have more respect for a man who lets me know where he stands, even if he's wrong, than the one who comes up like an angel and is nothing but a devil.",
-    source: "Malcom X",
-    citation: "Malcolm X Lays Harlem Riot To ‘Scare Tactics’ of Police", The New York Times,
-    year: July 21, 1964
-  }
+    quote :  "If violence is wrong in America, violence is wrong abroad. If it is wrong to be violent defending black women and black children and black babies and black men, then it is wrong for America to draft us, and make us violent abroad in defense of her. And if it is right for America to draft us, and teach us how to be violent in defense of her, then it is right for you and me to do whatever is necessary to defend our own people right here in this country." ,
+    source: "Malcom X" ,
+    citation: "New York City Speech",
+    year : 1963 } ,
+    
+    {
+      quote : "They [America] don't practice what they preach, whereas South Africa preaches and practices the same thing. I have more respect for a man who lets me know where he stands, even if he's wrong, than the one who comes up like an angel and is nothing but a devil.",
+    source : "Malcom X",
+    citation : "Malcolm X Lays Harlem Riot To ‘Scare Tactics’ of Police, The New York Times",
+    year : 1964} ,
+    
   {
-    quote: "A journey of a thousand miles begins with a single step.", 
-    source: Lao-tzu,
-    citation: The Way of Lao-tzu,
-    year: around the 600 BC - 400 BC
-  }
-  {quote: "You get freedom by letting your enemy know that you'll do anything to get your freedom; then you'll get it. It's the only way you'll get it.",
+    quote : "A journey of a thousand miles begins with a single step", 
+    source  : "Lao-tzu",
+    citation : "The Way of Lao-tzu" ,
+    year : "unknown"},
+  
+  { 
+    quote : "You get freedom by letting your enemy know that you'll do anything to get your freedom; then you'll get it. It's the only way you'll get it",
     source: "Malcom X",
     citation: "Advice to the Youth of Mississippi",
-    year: December 31, 1964
+    year: 1964
 }
 ] 
 
 
 
 /***
-  Create the `getRandomQuote` function to:
-   - Create a variable to store a random number 
-   - Cse the random number to `return` a random quote object from the `quotes` array.
-***/
+  I am uncertain of how to attach my randonNumber to the quote index
+   ***/
 
 function getRandomQuote() {
-  // generate a random number between 0 and the last index in the array parameter
-  // use the random number and box notation to grab a random item from the quotes
-  array
-  // return the random item
-  }
+  {
+    let randomNumber = Math.floor(Math.random() *quotes.length);
+   
+     
+    var quote = quotes[randomNumber].quote;
+    var source = quotes[randomNumber].source;
+    var citation = quotes[randomNumber].citation;
+    var year = quotes[randomNumber].year;
+   // return quotes[randomNumber];
+    
+    
+    /*** <p class = 'quote'>  </p> 
+    <p class ='source'> </p>
+    <p class = 'citation'> </p>
+    <p class = 'year'> </p>  ***/
 
+   const outQuote= (quote + source + citation + year)
+  return outQuote;
 
-/***
-  Create the `printQuote` function to: 
-   - Call the `getRandomQuote` function and assign it to a variable.
-   - Create a variable for the HTML string and set it equal to an empty string.
-   - Use the HTML template in the instructions or the markup in the index.html file, AND 
-     the random quote vairable to build your HTML string.
-   - Add the quote and source section to the HTML string.
-   - Use an if statement to check for the citation property before adding it to the HTML string.
-   - Use an if statement to check for the year property before adding it to the HTML string.
-   - Don't forget to close that final `p` tag.
-   - Set the `innerHTML` of the `quote-box` div to the HTML string. 
+  //  I had my variables backwards before help.
+  
+    }
+}
+
+/***I was lost until Julian Johannesen helped me work through several points of confusion for me. I go on line and I look at inexact examples that are dissimular to what I need to code and my code fails. I am going to buy a Javascript reference book with examples of how to use each function and method and complete examples of sytax and a well constructed glossary that makes it easy to find what I need.
+  
 ***/
 
 function printQuote() {
-  // create a variable that calls the getRandomQuote() function
-  // create a variable that initiates your HTML string
-  // using the template in the project instructions, add the two default quote
-  properties, quote and source
-  // if there is a quote.citation property, add it the string
-  // if there is a quote.year property, add it the string
-  // close the string with the necessary closing HTML tags
-  // set the innnerHTML of the .quote-box to the complete HTML string
+ 
+
+  //const outQuoteBox = getRandonQuote ( )
+
+    document.getElementById("quote-box").innerHTML = getRandomQuote()
+
+ 
   }
-
-
-/***
-  When the "Show another quote" button is clicked, the event listener 
-  below will be triggered, and it will call, or "invoke", the `printQuote` 
-  function. So do not make any changes to the line of code below this 
-  comment.
-***/
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
 
-// Remember to delete the comments that came with this file, and replace them with your own code comments.
